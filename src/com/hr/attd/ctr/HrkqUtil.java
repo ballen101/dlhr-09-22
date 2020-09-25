@@ -249,27 +249,7 @@ public class HrkqUtil {
 		org.findBySQL(sqlstr);
 		if (org.isEmpty())
 			throw new Exception("编码为【" + orgcode + "】的机构不存在");
-		//		if(empIds==null){
-		//			sqlstr = "SELECT * FROM hr_employee WHERE empstatid>0 and (empstatid NOT IN(6,11,12,13) OR(empstatid IN(11,12,13) AND kqdate_end>='" + yearmonth
-		//					+ "-01'))" + " and idpath like '" + org.idpath.getValue() + "%' and kqdate_start<'" + Systemdate.getStrDateByFmt(eddate, "yyyy-MM-dd") + "'";
-		//		}else{
-		//			sqlstr = "SELECT * FROM hr_employee WHERE er_id in ("+empIds+") and  empstatid>0 and (empstatid NOT IN(6,11,12,13) OR(empstatid IN(11,12,13) AND kqdate_end>='" + yearmonth
-		//					+ "-01'))" + " and idpath like '" + org.idpath.getValue() + "%' and kqdate_start<'" + Systemdate.getStrDateByFmt(eddate, "yyyy-MM-dd") + "'";
-		//		}
 		String empIdsString="";
-		//List<String> allEmpIds=findEmployeeByZz(org.idpath.getValue(),yearmonth);
-		//		if(empIdsList!=null && empIdsList.size()>0){
-		//			//筛选有效数据
-		//			for(String id : empIdsList){
-		//				if(!allEmpIds.contains(id)){
-		//					empIdsList.remove(id);
-		//				}
-		//			}
-		//			empIds=HRUtil.tranInSql(empIdsList);
-		//		}else{
-		//			empIds=HRUtil.tranInSql(allEmpIds);
-		//		}
-		//if(empIds.equals(""))	throw new Exception("编码为【" + orgcode + "】的机构"+yearmonth+"没有考勤记录");
 		if(empIdsList!=null && empIdsList.size()>0){
 			empIdsString=" and a.er_id in ("+HRUtil.tranInSql(empIdsList)+")";
 		}

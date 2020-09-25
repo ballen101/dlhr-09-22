@@ -12,7 +12,7 @@ public class Hr_depart_kq_reclac extends CJPA{
 	@CFieldinfo(fieldname = "id", iskey = true, notnull = true, caption = "ID", datetype = Types.INTEGER)
 	public CField id;
 //	考勤变更code
-	@CFieldinfo(fieldname = "dcode", iskey = true,codeid = 200, notnull = true, caption = "考勤变更编码", datetype = Types.VARCHAR)
+	@CFieldinfo(fieldname = "dcode", codeid = 200, notnull = true, caption = "考勤变更编码", datetype = Types.VARCHAR)
 	public CField dcode;
 //	部门名称
 	@CFieldinfo(fieldname = "orgname", caption = "部门名称", datetype = Types.VARCHAR)
