@@ -5,7 +5,6 @@ import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 
@@ -39,9 +38,9 @@ public class CExcelUtil {
 
 	public static String getCellValue(Cell aCell) {
 		if (aCell != null) {
-			CellType cellType = aCell.getCellTypeEnum();
+			int cellType = aCell.getCellType();
 			switch (cellType) {
-			case NUMERIC:// Numeric
+			case HSSFCell.CELL_TYPE_NUMERIC:// Numeric
 				if (HSSFDateUtil.isCellDateFormatted(aCell)) {// 如果是date类型则
 					Date dt = HSSFDateUtil.getJavaDate(aCell.getNumericCellValue()); // ，获取该cell的date值
 					return Systemdate.getStrDateByFmt(dt, "yyyy-MM-dd HH:mm:ss");
@@ -59,15 +58,15 @@ public class CExcelUtil {
 					}
 					return rst;
 				}
-			case STRING:// String
+			case HSSFCell.CELL_TYPE_STRING:// String
 				return aCell.getStringCellValue();
-			case BOOLEAN: // Boolean
+			case HSSFCell.CELL_TYPE_BOOLEAN: // Boolean
 				return String.valueOf(aCell.getBooleanCellValue());
-			case FORMULA: // 公式
+			case HSSFCell.CELL_TYPE_FORMULA: // 公式
 				return aCell.getCellFormula();
-			case BLANK: // 空值
+			case HSSFCell.CELL_TYPE_BLANK: // 空值
 				return null;
-			case ERROR: // 故障
+			case HSSFCell.CELL_TYPE_ERROR: // 故障
 				return null;
 			default:
 				return null;

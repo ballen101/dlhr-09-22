@@ -151,7 +151,7 @@ public class COHr_quotaoc_release {
 
 	private String getCellValue(Cell aCell) {
 		if (aCell != null) {
-			CellType cellType = aCell.getCellType();
+			int cellType = aCell.getCellType();
 
 			switch (cellType) {
 			case 0:// Numeric

@@ -159,7 +159,7 @@ public class COHr_emploanbatch {
 
 	private String getCellValue(HSSFCell aCell) {
 		if (aCell != null) {
-			int cellType = aCell.getCellTypeEnum();
+			int cellType = aCell.getCellType();
 			switch (cellType) {
 			case 0:// Numeric
 				return String.valueOf(aCell.getNumericCellValue()).toLowerCase();
