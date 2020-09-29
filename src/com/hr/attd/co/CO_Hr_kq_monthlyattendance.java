@@ -53,7 +53,7 @@ public class CO_Hr_kq_monthlyattendance {
 		JSONObject rst= CtHr_kq_monthlyattendance.getkqorgmonthrptdetail(org.code.getValue(),ym,null);
 		
 		JSONArray emps = rst.getJSONArray("rows");
-		rows.put("rows", calcKq(ym,emps,null));
+		rows.put("rows", calcKq1(ym,emps,null));
 		return rows.toString();
 
 	}
@@ -240,6 +240,44 @@ public class CO_Hr_kq_monthlyattendance {
 			bean.put("xxrjb", zmjbss);
 			bean.put("psjb", prjbss);
 		
+			datalist.add(bean);
+			//查询
+		}
+		//重排
+		JSONArray datalistOrderBy=new JSONArray();
+		if(values!=null){
+			for (Map<String, String> v : values) {
+				for (int i = 0; i < datalist.size(); i++) {
+					JSONObject jo = datalist.getJSONObject(i);
+					if(jo.get("employee_code").equals(v.get("employee_code"))){
+						datalistOrderBy.add(jo);
+					}
+				}
+			}
+		}else{
+			datalistOrderBy=datalist;
+		}
+		return datalistOrderBy;
+	}
+	private JSONArray calcKq1(String ym,JSONArray emps,List<Map<String, String>>values) throws Exception{
+		DictionaryTemp dictemp = new DictionaryTemp();// 数据字典缓存
+		JSONArray datalist=new JSONArray();
+		for (int i = 0; i < emps.size(); i++) {
+			System.out.print("emps="+emps.size());
+			JSONObject jo = emps.getJSONObject(i);
+			JSONObject bean= new JSONObject();
+			bean.put("er_id", jo.get("er_id"));
+			bean.put("employee_code", jo.get("employee_code"));
+			bean.put("employee_name", jo.get("employee_name"));
+			bean.put("idpath", jo.get("idpath"));
+			bean.put("orgid", jo.get("orgid"));
+			bean.put("orgcode", jo.get("orgcode"));
+			bean.put("orgname", jo.get("orgname"));
+			bean.put("sp_name", jo.get("sp_name"));
+			bean.put("lv_num", jo.get("lv_num"));
+			bean.put("hiredday", jo.get("hiredday"));
+			bean.put("ljdate", jo.get("ljdate"));
+			bean.put("ljtype", jo.get("ljtype1"));
 			datalist.add(bean);
 			//查询
 		}
