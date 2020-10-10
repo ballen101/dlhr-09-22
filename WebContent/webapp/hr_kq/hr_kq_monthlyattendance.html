@@ -15,7 +15,7 @@
   <script type="text/javascript" src="../js/common/cFindDlg.min.js"></script> 
   <script type="text/javascript" src="../js/common/mainline2.min.js"></script> 
   <title></title> 
-  <script type="text/javascript" style="cserver_js"> var comUrl_dic5 = {index: 'dic5',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"是"},{"dictvalue":"2","language1":"否"}], formator: function (value, row) { var jsondata = comUrl_dic5.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic5; } if (comUrl_dic5.type == 'combobox') { if (comUrl_dic5.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic5.valueField]) { rst = rst + jsondata[i][comUrl_dic5.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic5.valueField]) return jsondata[i][comUrl_dic5.textField]; } } } if (comUrl_dic5.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic5.editor= {type: 'combobox', options: {valueField:comUrl_dic5.valueField, textField:comUrl_dic5.textField, data: comUrl_dic5.jsondata}}; var comUrl_dic227 = {index: 'dic227',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"制单"},{"dictvalue":"2","language1":"进行中"},{"dictvalue":"3","language1":"复议"},{"dictvalue":"4","language1":"二次回访"},{"dictvalue":"9","language1":"完成"},{"dictvalue":"10","language1":"关闭"},{"dictvalue":"12","language1":"作废"}], formator: function (value, row) { var jsondata = comUrl_dic227.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic227; } if (comUrl_dic227.type == 'combobox') { if (comUrl_dic227.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic227.valueField]) { rst = rst + jsondata[i][comUrl_dic227.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic227.valueField]) return jsondata[i][comUrl_dic227.textField]; } } } if (comUrl_dic227.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic227.editor= {type: 'combobox', options: {valueField:comUrl_dic227.valueField, textField:comUrl_dic227.textField, data: comUrl_dic227.jsondata}}; var comUrl_dic1450 = {index: 'dic1450',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"兼职津贴"},{"dictvalue":"2","language1":"技术津贴"},{"dictvalue":"3","language1":"高温津贴"},{"dictvalue":"4","language1":"岗位津贴"}], formator: function (value, row) { var jsondata = comUrl_dic1450.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic1450; } if (comUrl_dic1450.type == 'combobox') { if (comUrl_dic1450.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic1450.valueField]) { rst = rst + jsondata[i][comUrl_dic1450.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic1450.valueField]) return jsondata[i][comUrl_dic1450.textField]; } } } if (comUrl_dic1450.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic1450.editor= {type: 'combobox', options: {valueField:comUrl_dic1450.valueField, textField:comUrl_dic1450.textField, data: comUrl_dic1450.jsondata}}; var comUrl_dic1455 = {index: 'dic1455',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"产品开发"},{"dictvalue":"2","language1":"产品工程"},{"dictvalue":"3","language1":"IE"},{"dictvalue":"4","language1":"工业设计"},{"dictvalue":"5","language1":"手板制作"},{"dictvalue":"6","language1":"认证测试"},{"dictvalue":"7","language1":"品质检验"},{"dictvalue":"8","language1":"模具设计/制作/维修"},{"dictvalue":"9","language1":"电子电机开发"},{"dictvalue":"10","language1":"信息化系统"},{"dictvalue":"11","language1":"物流模块"},{"dictvalue":"12","language1":"自动化"}], formator: function (value, row) { var jsondata = comUrl_dic1455.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic1455; } if (comUrl_dic1455.type == 'combobox') { if (comUrl_dic1455.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic1455.valueField]) { rst = rst + jsondata[i][comUrl_dic1455.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic1455.valueField]) return jsondata[i][comUrl_dic1455.textField]; } } } if (comUrl_dic1455.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic1455.editor= {type: 'combobox', options: {valueField:comUrl_dic1455.valueField, textField:comUrl_dic1455.textField, data: comUrl_dic1455.jsondata}}; var comUrl_dic1482 = {index: 'dic1482',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"导入"},{"dictvalue":"2","language1":"实习登记"},{"dictvalue":"3","language1":"入职定薪"},{"dictvalue":"4","language1":"调动核薪"},{"dictvalue":"5","language1":"入职转正调薪"},{"dictvalue":"6","language1":"调动转正调薪"},{"dictvalue":"7","language1":"个人特殊调薪"},{"dictvalue":"8","language1":"兼职津贴调薪"},{"dictvalue":"9","language1":"批量特殊调薪"},{"dictvalue":"10","language1":"技术津贴调薪"},{"dictvalue":"11","language1":"岗位津贴调薪"},{"dictvalue":"12","language1":"年度调薪"},{"dictvalue":"13","language1":"实习生入职"},{"dictvalue":"14","language1":"实习生转正"},{"dictvalue":"15","language1":"实习生分配"}], formator: function (value, row) { var jsondata = comUrl_dic1482.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic1482; } if (comUrl_dic1482.type == 'combobox') { if (comUrl_dic1482.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic1482.valueField]) { rst = rst + jsondata[i][comUrl_dic1482.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic1482.valueField]) return jsondata[i][comUrl_dic1482.textField]; } } } if (comUrl_dic1482.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic1482.editor= {type: 'combobox', options: {valueField:comUrl_dic1482.valueField, textField:comUrl_dic1482.textField, data: comUrl_dic1482.jsondata}}; var comUrl_dic1548 = {index: 'dic1548',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"8H"},{"dictvalue":"2","language1":"12H"}], formator: function (value, row) { var jsondata = comUrl_dic1548.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic1548; } if (comUrl_dic1548.type == 'combobox') { if (comUrl_dic1548.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic1548.valueField]) { rst = rst + jsondata[i][comUrl_dic1548.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic1548.valueField]) return jsondata[i][comUrl_dic1548.textField]; } } } if (comUrl_dic1548.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic1548.editor= {type: 'combobox', options: {valueField:comUrl_dic1548.valueField, textField:comUrl_dic1548.textField, data: comUrl_dic1548.jsondata}}; var comUrl_dic782 = {index: 'dic782',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"自离"},{"dictvalue":"2","language1":"辞职"},{"dictvalue":"3","language1":"辞退"},{"dictvalue":"4","language1":"裁员"},{"dictvalue":"5","language1":"退休"},{"dictvalue":"6","language1":"补偿离职"},{"dictvalue":"7","language1":"无补偿离职"},{"dictvalue":"8","language1":"招募中心自离"}], formator: function (value, row) { var jsondata = comUrl_dic782.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic782; } if (comUrl_dic782.type == 'combobox') { if (comUrl_dic782.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic782.valueField]) { rst = rst + jsondata[i][comUrl_dic782.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic782.valueField]) return jsondata[i][comUrl_dic782.textField]; } } } if (comUrl_dic782.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic782.editor= {type: 'combobox', options: {valueField:comUrl_dic782.valueField, textField:comUrl_dic782.textField, data: comUrl_dic782.jsondata}}; var comUrl_dic227 = {index: 'dic227',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"制单"},{"dictvalue":"2","language1":"进行中"},{"dictvalue":"3","language1":"复议"},{"dictvalue":"4","language1":"二次回访"},{"dictvalue":"9","language1":"完成"},{"dictvalue":"10","language1":"关闭"},{"dictvalue":"12","language1":"作废"}], formator: function (value, row) { var jsondata = comUrl_dic227.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic227; } if (comUrl_dic227.type == 'combobox') { if (comUrl_dic227.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic227.valueField]) { rst = rst + jsondata[i][comUrl_dic227.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic227.valueField]) return jsondata[i][comUrl_dic227.textField]; } } } if (comUrl_dic227.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic227.editor= {type: 'combobox', options: {valueField:comUrl_dic227.valueField, textField:comUrl_dic227.textField, data: comUrl_dic227.jsondata}}; var comUrls = [{ index: "dic5", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=5", valueField: 'dictvalue', textField: 'language1' }, { index: "dic227", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=227", valueField: 'dictvalue', textField: 'language1' }, { index: "dic1450", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=1450", valueField: 'dictvalue', textField: 'language1' }, { index: "dic1455", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=1455", valueField: 'dictvalue', textField: 'language1' }, { index: "dic1482", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=1482", valueField: 'dictvalue', textField: 'language1' }, { index: "dic1548", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=1548", valueField: 'dictvalue', textField: 'language1' }, { index: "dic782", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=782", valueField: 'dictvalue', textField: 'language1' }, { index: "dic227", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=227", valueField: 'dictvalue', textField: 'language1' }, ]; var formtype = 1; var allowAtt = true; var allowWF = true;</script> 
+  <script type="text/javascript" style="cserver_js"> var comUrl_dic5 = {index: 'dic5',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"是"},{"dictvalue":"2","language1":"否"}], formator: function (value, row) { var jsondata = comUrl_dic5.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic5; } if (comUrl_dic5.type == 'combobox') { if (comUrl_dic5.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic5.valueField]) { rst = rst + jsondata[i][comUrl_dic5.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic5.valueField]) return jsondata[i][comUrl_dic5.textField]; } } } if (comUrl_dic5.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic5.editor= {type: 'combobox', options: {valueField:comUrl_dic5.valueField, textField:comUrl_dic5.textField, data: comUrl_dic5.jsondata}}; var comUrl_dic227 = {index: 'dic227',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"制单"},{"dictvalue":"2","language1":"进行中"},{"dictvalue":"3","language1":"复议"},{"dictvalue":"4","language1":"二次回访"},{"dictvalue":"9","language1":"完成"},{"dictvalue":"10","language1":"关闭"},{"dictvalue":"12","language1":"作废"}], formator: function (value, row) { var jsondata = comUrl_dic227.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic227; } if (comUrl_dic227.type == 'combobox') { if (comUrl_dic227.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic227.valueField]) { rst = rst + jsondata[i][comUrl_dic227.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic227.valueField]) return jsondata[i][comUrl_dic227.textField]; } } } if (comUrl_dic227.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic227.editor= {type: 'combobox', options: {valueField:comUrl_dic227.valueField, textField:comUrl_dic227.textField, data: comUrl_dic227.jsondata}}; var comUrl_dic1450 = {index: 'dic1450',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"兼职津贴"},{"dictvalue":"2","language1":"技术津贴"},{"dictvalue":"3","language1":"高温津贴"},{"dictvalue":"4","language1":"岗位津贴"}], formator: function (value, row) { var jsondata = comUrl_dic1450.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic1450; } if (comUrl_dic1450.type == 'combobox') { if (comUrl_dic1450.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic1450.valueField]) { rst = rst + jsondata[i][comUrl_dic1450.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic1450.valueField]) return jsondata[i][comUrl_dic1450.textField]; } } } if (comUrl_dic1450.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic1450.editor= {type: 'combobox', options: {valueField:comUrl_dic1450.valueField, textField:comUrl_dic1450.textField, data: comUrl_dic1450.jsondata}}; var comUrl_dic1455 = {index: 'dic1455',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"产品开发"},{"dictvalue":"2","language1":"产品工程"},{"dictvalue":"3","language1":"IE"},{"dictvalue":"4","language1":"工业设计"},{"dictvalue":"5","language1":"手板制作"},{"dictvalue":"6","language1":"认证测试"},{"dictvalue":"7","language1":"品质检验"},{"dictvalue":"8","language1":"模具设计/制作/维修"},{"dictvalue":"9","language1":"电子电机开发"},{"dictvalue":"10","language1":"信息化系统"},{"dictvalue":"11","language1":"物流模块"},{"dictvalue":"12","language1":"自动化"}], formator: function (value, row) { var jsondata = comUrl_dic1455.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic1455; } if (comUrl_dic1455.type == 'combobox') { if (comUrl_dic1455.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic1455.valueField]) { rst = rst + jsondata[i][comUrl_dic1455.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic1455.valueField]) return jsondata[i][comUrl_dic1455.textField]; } } } if (comUrl_dic1455.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic1455.editor= {type: 'combobox', options: {valueField:comUrl_dic1455.valueField, textField:comUrl_dic1455.textField, data: comUrl_dic1455.jsondata}}; var comUrl_dic1482 = {index: 'dic1482',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"导入"},{"dictvalue":"2","language1":"实习登记"},{"dictvalue":"3","language1":"入职定薪"},{"dictvalue":"4","language1":"调动核薪"},{"dictvalue":"5","language1":"入职转正调薪"},{"dictvalue":"6","language1":"调动转正调薪"},{"dictvalue":"7","language1":"个人特殊调薪"},{"dictvalue":"8","language1":"兼职津贴调薪"},{"dictvalue":"9","language1":"批量特殊调薪"},{"dictvalue":"10","language1":"技术津贴调薪"},{"dictvalue":"11","language1":"岗位津贴调薪"},{"dictvalue":"12","language1":"年度调薪"},{"dictvalue":"13","language1":"实习生入职"},{"dictvalue":"14","language1":"实习生转正"},{"dictvalue":"15","language1":"实习生分配"}], formator: function (value, row) { var jsondata = comUrl_dic1482.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic1482; } if (comUrl_dic1482.type == 'combobox') { if (comUrl_dic1482.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic1482.valueField]) { rst = rst + jsondata[i][comUrl_dic1482.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic1482.valueField]) return jsondata[i][comUrl_dic1482.textField]; } } } if (comUrl_dic1482.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic1482.editor= {type: 'combobox', options: {valueField:comUrl_dic1482.valueField, textField:comUrl_dic1482.textField, data: comUrl_dic1482.jsondata}}; var comUrl_dic1548 = {index: 'dic1548',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"8H"},{"dictvalue":"2","language1":"12H"}], formator: function (value, row) { var jsondata = comUrl_dic1548.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic1548; } if (comUrl_dic1548.type == 'combobox') { if (comUrl_dic1548.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic1548.valueField]) { rst = rst + jsondata[i][comUrl_dic1548.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic1548.valueField]) return jsondata[i][comUrl_dic1548.textField]; } } } if (comUrl_dic1548.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic1548.editor= {type: 'combobox', options: {valueField:comUrl_dic1548.valueField, textField:comUrl_dic1548.textField, data: comUrl_dic1548.jsondata}}; var comUrl_dic782 = {index: 'dic782',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"自离"},{"dictvalue":"2","language1":"辞职"},{"dictvalue":"3","language1":"辞退"},{"dictvalue":"4","language1":"裁员"},{"dictvalue":"5","language1":"退休"},{"dictvalue":"6","language1":"补偿离职"},{"dictvalue":"7","language1":"无补偿离职"},{"dictvalue":"8","language1":"招募中心自离"}], formator: function (value, row) { var jsondata = comUrl_dic782.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic782; } if (comUrl_dic782.type == 'combobox') { if (comUrl_dic782.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic782.valueField]) { rst = rst + jsondata[i][comUrl_dic782.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic782.valueField]) return jsondata[i][comUrl_dic782.textField]; } } } if (comUrl_dic782.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic782.editor= {type: 'combobox', options: {valueField:comUrl_dic782.valueField, textField:comUrl_dic782.textField, data: comUrl_dic782.jsondata}}; var comUrl_dic227 = {index: 'dic227',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"制单"},{"dictvalue":"2","language1":"进行中"},{"dictvalue":"3","language1":"复议"},{"dictvalue":"4","language1":"二次回访"},{"dictvalue":"9","language1":"完成"},{"dictvalue":"10","language1":"关闭"},{"dictvalue":"12","language1":"作废"}], formator: function (value, row) { var jsondata = comUrl_dic227.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic227; } if (comUrl_dic227.type == 'combobox') { if (comUrl_dic227.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic227.valueField]) { rst = rst + jsondata[i][comUrl_dic227.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic227.valueField]) return jsondata[i][comUrl_dic227.textField]; } } } if (comUrl_dic227.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic227.editor= {type: 'combobox', options: {valueField:comUrl_dic227.valueField, textField:comUrl_dic227.textField, data: comUrl_dic227.jsondata}}; var comUrl_dic901 = {index: 'dic901',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"月薪","language1":"月薪"},{"dictvalue":"计件","language1":"计件"},{"dictvalue":"计时","language1":"计时"},{"dictvalue":"年薪","language1":"年薪"},{"dictvalue":"日薪","language1":"日薪"}], formator: function (value, row) { var jsondata = comUrl_dic901.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic901; } if (comUrl_dic901.type == 'combobox') { if (comUrl_dic901.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic901.valueField]) { rst = rst + jsondata[i][comUrl_dic901.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic901.valueField]) return jsondata[i][comUrl_dic901.textField]; } } } if (comUrl_dic901.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic901.editor= {type: 'combobox', options: {valueField:comUrl_dic901.valueField, textField:comUrl_dic901.textField, data: comUrl_dic901.jsondata}}; var comUrl_dic782 = {index: 'dic782',type: 'combobox',multiple: false,valueField: 'dictvalue',textField: 'language1',jsondata:[{"dictvalue":"1","language1":"自离"},{"dictvalue":"2","language1":"辞职"},{"dictvalue":"3","language1":"辞退"},{"dictvalue":"4","language1":"裁员"},{"dictvalue":"5","language1":"退休"},{"dictvalue":"6","language1":"补偿离职"},{"dictvalue":"7","language1":"无补偿离职"},{"dictvalue":"8","language1":"招募中心自离"}], formator: function (value, row) { var jsondata = comUrl_dic782.jsondata; if (value == 'get_com_data') { return jsondata; } if (value == 'get_com_url') { return comUrl_dic782; } if (comUrl_dic782.type == 'combobox') { if (comUrl_dic782.multiple) { if((!value)||(value.length==0)) return value; var vs = value.split(','); var rst = ''; for (var j = 0; j < vs.length; j++) { var v = vs[j]; if ((v) && (v.length > 0)) { for (var i = 0; i < jsondata.length; i++) { if (v == jsondata[i][comUrl_dic782.valueField]) { rst = rst + jsondata[i][comUrl_dic782.textField] + ','; break; } } } } if (rst.length > 0) rst= rst.substring(0, rst.length - 1); return rst; } else { for (var i = 0; i < jsondata.length; i++) { if (value == jsondata[i][comUrl_dic782.valueField]) return jsondata[i][comUrl_dic782.textField]; } } } if (comUrl_dic782.type == 'combotree') { var txt = $getTreeTextById(jsondata, value); if (txt == undefined) txt = value; return txt; } return value; } }; comUrl_dic782.editor= {type: 'combobox', options: {valueField:comUrl_dic782.valueField, textField:comUrl_dic782.textField, data: comUrl_dic782.jsondata}}; var comUrls = [{ index: "dic5", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=5", valueField: 'dictvalue', textField: 'language1' }, { index: "dic227", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=227", valueField: 'dictvalue', textField: 'language1' }, { index: "dic1450", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=1450", valueField: 'dictvalue', textField: 'language1' }, { index: "dic1455", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=1455", valueField: 'dictvalue', textField: 'language1' }, { index: "dic1482", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=1482", valueField: 'dictvalue', textField: 'language1' }, { index: "dic1548", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=1548", valueField: 'dictvalue', textField: 'language1' }, { index: "dic782", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=782", valueField: 'dictvalue', textField: 'language1' }, { index: "dic227", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=227", valueField: 'dictvalue', textField: 'language1' }, { index: "dic901", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=901", valueField: 'dictvalue', textField: 'language1' }, { index: "dic782", type: "combobox", url: "/web/dict/getdictvalues.co?dicid=782", valueField: 'dictvalue', textField: 'language1' } ]; var formtype = 1; var allowAtt = true; var allowWF = true;</script> 
   <script type="text/javascript">
 			var listGridColumns = [{
 					field: 'macode',
@@ -100,55 +100,58 @@
 					field: 'hiredday',
 					title: '入职日期',
 					width: 64,
-					formatter: $fieldDateFormatorYYYY_MM_DD
+					formatter: $fieldDateFormatorYYYY_MM_DD,
+					editor: {type: 'date',options:{precision:2}}
 				},
 				{
 					field: 'ljdate',
 					title: '离职日期',
 					width: 64,
-					formatter: $fieldDateFormatorYYYY_MM_DD
+					formatter: $fieldDateFormatorYYYY_MM_DD,
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'ljtype',
 					title: '离职类别',
 					width: 64,
-					formatter: comUrl_dic782.formator
+					formatter: comUrl_dic782.formator,
+					editor: comUrl_dic782.editor
 				},
 				{
 					field: 'ycmq',
 					title: '应出满勤',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'sjcq',
 					title: '实际出勤',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'psjb',
 					title: '平时加班',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'xxrjb',
 					title: '休息日加班',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'fdjrjb',
 					title: '法定假日加班',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'kgts',
 					title: '旷工天数',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'cdztcs',
@@ -166,25 +169,25 @@
 					field: 'bjts',
 					title: '病假天数',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'qjts',
 					title: '请假天数',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'yxts',
 					title: '法定假日',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'ybts',
 					title: '夜班天数',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'gzxsz',
@@ -197,19 +200,20 @@
 					field: 'jxfs',
 					title: '计薪方式',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					formatter: comUrl_dic901.formator,
+					editor: comUrl_dic901.editor
 				},
 				{
 					field: 'tsts1',
 					title: '特殊天数1',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'tsts2',
 					title: '特殊天数2',
 					width: 64,
-					editor: {type: 'numberbox',options:{precision:1}}
+					editor: {type: 'numberbox',options:{precision:2}}
 				},
 				{
 					field: 'remark',
@@ -219,7 +223,6 @@
 				}
 			];
 			frmOptions = {
-				// findUrl: _serUrl + "/web/hrsalary/list/findpostsublist.co",
 				JPAClass: "com.hr.attd.entity.Hr_kq_monthlyattendance",
 				JPAIdField: "maid",
 				allowAtt: true,
@@ -227,28 +230,13 @@
 				allow_void: false, //作废
 				gdLinesName: 'hr_kq_monthlyattendance_lines', //行Grid ID对应到json 明细行属性 名
 				gdLinesColumns: gdLinesColumns,
-				datainfo_pw_title: "月薪人员考勤数据提报",
+				datainfo_pw_title: "特殊月薪人员考勤数据提报",
 				allow_expt_list: true,
-				datainfo_line_title: "月考勤数据明细",
+				datainfo_line_title: "特殊月考勤数据明细",
 				htmlTemeType: HtmlTempType.htMLPop,
 				allow_copy: false,
 				disableButtonType: _NUBType.hide,
-				/*extButtons: [//扩展按钮
-				    {
-				        text: '导入Excel',
-				        iconCls: 'icon-importexcel',
-				        handler: function () {
-				            impexcel();
-				        }
-				    },
-				    {
-				        text: '导出导入模板',
-				        iconCls: 'icon-exportexcel',
-				        handler: function () {
-				            mainline.exportExcelModel();
-				        }
-				    }
-				],*/
+				
 				OnReady: function() { //都准备好后
 					var tb = mainline.lineToolBar();
 					tb.push("-");
@@ -267,48 +255,7 @@
 							mainline.exportExcelModel();
 						}
 					});
-					// tb.push("-");
-					// tb.push({
-					// 	text: '产假人员明细',
-					// 	iconCls: 'icon-exportexcel',
-					// 	handler: function() {
-					// 		onFindNotPBemployee();
-					// 	}
-					// });
-					// tb.push("-");
-					// tb.push({
-					// 	text: '按月生成数据',
-					// 	iconCls: 'icon-exportexcel',
-					// 	handler: function() {
-					// 		var submitdate = mainline.getFieldValue("submitdate");
-					// 		var orgid = mainline.getFieldValue("orgid");
-					// 		if ((!submitdate) || (submitdate.length == 0)) {
-					// 			$.messager.alert('错误', "请先选择提报月份！", 'error');
-					// 			return;
-					// 		}
-					// 		if ((!orgid) || (orgid.length == 0)) {
-					// 			$.messager.alert('错误', "请先选择提报部门！", 'error');
-					// 			return;
-					// 		}
-					// 		$("#detail_main_grid_id").datagrid("loadData", []);
-					// 		if (frmOptions.afterClearGrid)
-					// 			frmOptions.afterClearGrid("#detail_main_grid_id");
-					// 		mainline.setDataChanged(true, "清空");
-					// 		var chgurl = _serUrl + "/web/hrkq/monthlyattendance/getSubmitKqMonth.co?orgid=" + orgid + "&submitdate=" +
-					// 			submitdate;
-					// 		$ajaxjsonget(chgurl, function(jsdata) {
-					// 			var rows = jsdata.rows;
-					// 			for (var i = 0; i < rows.length; i++) {
-					// 				var row = rows[i];
-					// 				if (!$C.grid.getRowByFields("#detail_main_grid_id", [row.er_id], ["er_id"])) {
-					// 					$("#detail_main_grid_id").datagrid("appendRow", row);
-					// 				}
-					// 			}
-					// 		}, function(err) {
-					// 			alert(JSON.stringify(err));
-					// 		});
-					// 	}
-					// });
+					
 					$parserDatebox2YearMonth(mainline.getField('submitdate'));
 				},
 				onAddLine: function(append) { //点击添加明细行
@@ -316,16 +263,13 @@
 					// append(rowdata);
 				},
 				onNew: function(jsondata) {
-					// jsondata.subsdate = new Date();
-					//jsondata.substype = 4;
+					
 				},
 				beforeSave: function() {
-					/*   if (!checkdata())
-					       throw new Error("数据检查失败，终止保存!");*/
+					
 				},
 				onFind: function(parms) {
-					//  var p={parmname: 'ispermanent',  reloper: '=', parmvalue: 1};
-					// parms.parms.push(p);
+					
 				},
 				onEditChanged: function(fdname, newValue, oldValue) {
 				
@@ -350,97 +294,7 @@
 				}
 
 			};
-
-			var select_notpbemployee_pw = undefined;
-
-			function onFindNotPBemployee() {
-				var submitdate = mainline.getFieldValue("submitdate");
-				var orgid = mainline.getFieldValue("orgid");
-				if ((!submitdate) || (submitdate.length == 0)) {
-					$.messager.alert('错误', "请先选择提报月份！", 'error');
-					return;
-				}
-				if ((!orgid) || (orgid.length == 0)) {
-					$.messager.alert('错误', "请先选择提报度部门！", 'error');
-					return;
-				}
-
-				var url = _serUrl + "/web/hrkq/monthsubmit/findnotpbemp.co?orgid=" + orgid + "&submitdate=" + submitdate;
-				var wo = {
-					id: "select_notpbemployee_pw",
-					coURL: url,
-					//orderStr: " orgid asc ",
-					multiRow: true,
-					//idField: 'er_id',
-					autoFind: true, //是否自动查询
-					gdListColumns: [{
-							field: 'employee_code',
-							title: '工号',
-							width: 120
-						},
-						{
-							field: 'employee_name',
-							title: '姓名',
-							width: 100
-						},
-						{
-							field: 'htname',
-							title: '假期类别',
-							width: 80
-						},
-						{
-							field: 'cj',
-							title: '当月请假天数',
-							width: 40
-						},
-						{
-							field: 'sjcq',
-							title: '实际出勤',
-							width: 40
-						},
-						{
-							field: 'hdays',
-							title: '总请假天数',
-							width: 40
-						}
-					],
-					//         onResult: function (rows) {
-					//             var datas = $("#detail_main_grid_id").datagrid("getRows");
-					//             var apddatas = [];
-
-					//             for (var i = 0; i < rows.length; i++) {
-					//                 var row = rows[i];
-					//                 if (!$getRowByFields(datas, [row.er_id, "3"], ["tid", "ttype"])) {
-					//                     var erow = {};
-					//                     erow.tid = row.er_id;
-					//                     erow.tcode = row.employee_code;
-					//                     erow.tname = row.employee_name;
-					//                     erow.sp_name = row.sp_name;
-					//                     erow.lv_num = row.lv_num;
-					//                     erow.ttype = "3";
-					//                     apddatas.push(erow);
-					//                 }
-					//             }
-					//             datas = datas.concat(apddatas);
-					//             $("#detail_main_grid_id").datagrid("loadData", datas);
-					//             mainline.setDataChanged(true);
-					//         }
-				};
-				if (!select_notpbemployee_pw) {
-					select_notpbemployee_pw = new TSearchForm(wo);
-				}
-				var extp = [];
-				extp.push({
-					parmname: 'includelv',
-					reloper: '=',
-					parmvalue: "false"
-				}); //不包含离职的
-				select_notpbemployee_pw.extendOptions({
-					coURL: url
-				});
-				select_notpbemployee_pw.show();
-			}
-
+/* 导入excel */
 			function impexcel() {
 				var submitdate = mainline.getFieldValue("submitdate");
 				var orgid = mainline.getFieldValue("orgid");
@@ -458,7 +312,7 @@
 						$.messager.alert('错误', err, 'error');
 					},
 					function(jsdata) {
-						var rows = jsdata.rows;
+						var rows = jsdata;
 						for (var i = 0; i < rows.length; i++) {
 							var row = rows[i];
 							if (!$C.grid.getRowByFields("#detail_main_grid_id", [row.er_id], ["er_id"])) {
@@ -603,9 +457,11 @@
 			}
 		</script> 
   <script>"undefined"==typeof CODE_LIVE&&(!function(e){var t={nonSecure:"57089",secure:"57098"},c={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=c[n]+r[n]+":"+t[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document),CODE_LIVE=!0);</script> 
+  <script>"undefined"==typeof CODE_LIVE&&(!function(e){var t={nonSecure:"57089",secure:"57098"},c={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=c[n]+r[n]+":"+t[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document),CODE_LIVE=!0);</script> 
+  <script>"undefined"==typeof CODE_LIVE&&(!function(e){var t={nonSecure:"57089",secure:"57098"},c={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=c[n]+r[n]+":"+t[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document),CODE_LIVE=!0);</script> 
  </head> 
- <body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-827" data-genuitec-path="/dlhr/WebContent/webapp/templet/src/hr_kq/hrkq_monthsubmit.html"> 
-  <div id="loading" style="position: absolute;z-index: 1000;top: 0px;left: 0px;width: 100%;height: 100%;text-align: center;padding-top: 20%;background-color:white;font-size: 12px" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-720" data-genuitec-path="/dlhr/WebContent/webapp/templet/default/main_line_pop.html">
+ <body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-818" data-genuitec-path="/dlhr/WebContent/webapp/templet/src/hr_kq/hr_kq_monthlyattendance.html"> 
+  <div id="loading" style="position: absolute;z-index: 1000;top: 0px;left: 0px;width: 100%;height: 100%;text-align: center;padding-top: 20%;background-color:white;font-size: 12px" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-722" data-genuitec-path="/dlhr/WebContent/webapp/templet/default/main_line_pop.html">
     界面加载中... ... 
   </div> 
   <style type="text/css">
@@ -692,11 +548,11 @@
     </div> 
     <div data-options="region:'center',border:false" style="padding:0px;overflow-x: hidden;overflow-y: auto"> 
      <div id="main_form_div_id"> 
-      <table id="maindata_id" border="0" style="" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-827" data-genuitec-path="/dlhr/WebContent/webapp/templet/src/hr_kq/hrkq_monthsubmit.html"> 
+      <table id="maindata_id" border="0" style="" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-818" data-genuitec-path="/dlhr/WebContent/webapp/templet/src/hr_kq/hr_kq_monthlyattendance.html"> 
        <tbody> 
         <tr> 
          <td cjoptions="fdname:'macode'">编码</td> 
-         <td><input cjoptions="easyui_class:'easyui-textbox',fdname:'mkq_code',crequired:true,readonly:true" style="height:20px;width: 100px"></td> 
+         <td><input cjoptions="easyui_class:'easyui-textbox',fdname:'macode',crequired:true,readonly:true" style="height:20px;width: 100px"></td> 
          <td cjoptions="fdname:'submitdate'">提报月份</td> 
          <td><input cjoptions="easyui_class:'easyui-datebox',fdname:'submitdate',formatter:$dateformattostrrYYYY_MM,editable:false" style="height:20px;width: 100px"></td> 
          <td cjoptions="fdname:'orgname'">机构</td> 

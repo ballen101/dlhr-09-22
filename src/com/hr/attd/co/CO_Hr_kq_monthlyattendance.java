@@ -29,7 +29,7 @@ import com.corsair.server.util.CReport;
 import com.corsair.server.util.CorUtil;
 import com.corsair.server.util.DictionaryTemp;
 import com.corsair.server.util.UpLoadFileEx;
-import com.hr.attd.ctr.CtrHr_kq_monthlyattendance;
+//import com.hr.attd.ctr.CtrHr_kq_monthlyattendance;
 import com.hr.attd.ctr.HrkqUtil;
 import com.hr.attd.entity.Hr_kq_makeup_monthsubmit_line;
 import com.hr.attd.entity.Hr_kq_monthlyattendance_line;
@@ -198,15 +198,16 @@ public class CO_Hr_kq_monthlyattendance {
 			
 			if (!lv.isEmpty()) {
 //				bean.put("ljtype1", jo.get("ljtype1"));
+				if(!lv.ljreason.getValue().isEmpty()){
+					bean.put("ljtype", lv.ljreason.getValue());
+				}
 				if(!lv.ljtype2.getValue().isEmpty()){
 					bean.put("ljtype", lv.ljtype2.getValue());
 				}
 				if(!lv.ljtype1.getValue().isEmpty()){
 					bean.put("ljtype", lv.ljtype1.getValue());
 				}
-				if(!lv.ljreason.getValue().isEmpty()){
-					bean.put("ljtype", lv.ljreason.getValue());
-				}			
+							
 			}else{
 				bean.put("ljtype","");
 			}
@@ -303,7 +304,10 @@ public class CO_Hr_kq_monthlyattendance {
 						lv.findBySQL(sqlstr1);
 						
 						if (!lv.isEmpty()) {
+							if(!lv.ljreason.getValue().isEmpty()){
 
+								kqmsl.ljtype.setValue(lv.ljreason.getValue());
+							}
 							if(!lv.ljtype2.getValue().isEmpty()){
 
 								kqmsl.ljtype.setValue(lv.ljtype2.getValue());
@@ -312,10 +316,7 @@ public class CO_Hr_kq_monthlyattendance {
 
 								kqmsl.ljtype.setValue(lv.ljtype1.getValue());
 							}
-							if(!lv.ljreason.getValue().isEmpty()){
-
-								kqmsl.ljtype.setValue(lv.ljreason.getValue());
-							}			
+										
 						}else{
 							jo.put("ljtype","");
 						}
