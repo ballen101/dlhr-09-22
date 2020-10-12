@@ -49,8 +49,8 @@ public class CO_Hr_kq_monthlyattendance {
 		HashMap<String, String> parms = CSContext.getParms();
 		String orgid = CorUtil.hashMap2Str(parms, "orgid", "orgid参数不能为空");
 		String ym = CorUtil.hashMap2Str(parms, "submitdate", "submitdate参数不能为空");
-		Date bgdate = Systemdate.getDateByStr(Systemdate.getStrDateyyyy_mm_dd(Systemdate.getDateByStr(ym)));// 去除时分秒
-		Date eddate = Systemdate.dateMonthAdd(bgdate, 1);// 加一月
+//		Date bgdate = Systemdate.getDateByStr(Systemdate.getStrDateyyyy_mm_dd(Systemdate.getDateByStr(ym)));// 去除时分秒
+//		Date eddate = Systemdate.dateMonthAdd(bgdate, 1);// 加一月
 		Shworg org = new Shworg();
 		org.findByID(orgid);
 		if (org.isEmpty())
@@ -164,7 +164,7 @@ public class CO_Hr_kq_monthlyattendance {
 	}
 
 	private JSONArray calcKq1(String ym,JSONArray emps,List<Map<String, String>>values) throws Exception{
-		DictionaryTemp dictemp = new DictionaryTemp();// 数据字典缓存
+//		DictionaryTemp dictemp = new DictionaryTemp();// 数据字典缓存
 		JSONArray datalist=new JSONArray();
 		for (int i = 0; i < emps.size(); i++) {
 			System.out.print("emps="+emps.size());
@@ -181,7 +181,7 @@ public class CO_Hr_kq_monthlyattendance {
 			bean.put("lv_num", jo.get("lv_num"));
 			bean.put("hiredday", jo.get("hiredday"));
 			bean.put("ljdate", jo.get("ljdate"));
-			
+			bean.put("jxfs",jo.get("pay_way"));
 //			bean.put("ljtype", jo.get("ljtype1"));
 			HashMap<String, String> parms = CSContext.getParms();
 			String orgid = CorUtil.hashMap2Str(parms, "orgid", "orgid参数不能为空");
@@ -247,6 +247,7 @@ public class CO_Hr_kq_monthlyattendance {
 		Hr_employee emp = new Hr_employee();
 		Shworg emporg = new Shworg();
 		List<String> empIdsList=new ArrayList<String>();
+		DictionaryTemp dictemp = new DictionaryTemp();// 数据字典缓存
 		for (Map<String, String> v : values) {
 			String employee_code = v.get("employee_code");
 			if ((employee_code == null) || (employee_code.isEmpty()))
@@ -255,10 +256,9 @@ public class CO_Hr_kq_monthlyattendance {
 			emp.findBySQL("SELECT * FROM `hr_employee` WHERE employee_code='" + employee_code + "'");
 			if (emp.isEmpty())
 				throw new Exception("工号【" + employee_code + "】不存在人事资料");
-			emporg.clear();
-			emporg.findByID(emp.orgid.getValue());
-			if (emporg.isEmpty())
-				throw new Exception("没找到员工【" + emp.employee_name.getValue() + "】所属的ID为【" + emp.orgid.getValue() + "】的机构");
+//			emporg.findByID(emp.orgid.getValue());
+//			if (emporg.isEmpty())
+//				throw new Exception("没找到员工【" + emp.employee_name.getValue() + "】所属的ID为【" + emp.orgid.getValue() + "】的机构");
 			empIdsList.add(emp.er_id.getValue());
 		}
 		String empIdsString="";
@@ -292,6 +292,7 @@ public class CO_Hr_kq_monthlyattendance {
 					kqmsl.lv_id.setValue(jo.getString("lv_id"));
 					kqmsl.lv_num.setValue(jo.getString("lv_num"));
 					kqmsl.hiredday.setValue(jo.getString("hiredday"));
+					kqmsl.jxfs.setValue(jo.getString("pay_way"));
 					Date bgdate = Systemdate.getDateByStr(Systemdate.getStrDateyyyy_mm_dd(Systemdate.getDateByStr(ym)));// 去除时分秒
 					Date eddate = Systemdate.dateMonthAdd(bgdate, 1);// 加一月
 //					rptlvinfo(jo,bgdate, eddate);// 离职类型
@@ -334,8 +335,12 @@ public class CO_Hr_kq_monthlyattendance {
 					kqmsl.bjts.setValue(v.get("bjts"));
 					kqmsl.qjts.setValue(v.get("qjts"));
 					kqmsl.yxts.setValue(v.get("yxts"));
-					kqmsl.gzxsz.setValue(v.get("gzxsz"));					
-					kqmsl.jxfs.setValue(v.get("jxfs"));
+					kqmsl.gzxsz.setValue(v.get("gzxsz"));
+					kqmsl.ybts.setValue(v.get("ybts"));
+					if(v.get("gzxsz")!=null && !v.get("gzxsz").equals("")){
+						kqmsl.gzxsz.setValue( dictemp.getVbCE("1548", v.get("gzxsz"), false,"工号【" + jo.get("employee_code") + "】工作小时制【" + v.get("gzxsz") + "】不存在"));
+					}
+//					kqmsl.jxfs.setValue(v.get("jxfs"));
 					kqmsl.tsts1.setValue(v.get("tsts1"));
 					kqmsl.tsts2.setValue(v.get("tsts2"));
 					kqmsl.remark.setValue(v.get("remark"));				
@@ -367,10 +372,9 @@ public class CO_Hr_kq_monthlyattendance {
 		efields.add(new CExcelField("法定假日", "yxts", true));
 
 		efields.add(new CExcelField("夜班天数", "ybts", true));
-		efields.add(new CExcelField("计薪方式", "jxfs", true));
+		efields.add(new CExcelField("工作小时制", "gzxsz", true));
+//		efields.add(new CExcelField("计薪方式", "jxfs", true));
 		efields.add(new CExcelField("特殊天数1", "tsts1", true));
-
-
 		efields.add(new CExcelField("特殊天数2", "tsts2", true));
 		efields.add(new CExcelField("备注", "remark", false));
 
